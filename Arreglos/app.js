@@ -40,13 +40,44 @@ console.log(frutas);
 
 //Objetos literales
 
+// var persona ={
+//     nombre   : 'Allison',
+//     apellido : 'Herrera',
+//     gustos   : ['Futbol','Peliculas','Inglés'],
+//     trabajo  : 'Instructor',
+//     esCasado : true
+// };
+
+// console.log(persona.nombre);
+// console.log(persona['trabajo']);
+
+// persona.esCasado = false;
+// console.log(persona.esCasado);
+
+/* Objetos con la sintaxis Object*/
+//  var persona2 = new Object();
+//  persona2.nombre= 'Allison';
+//  persona2.apellido = 'Herrera';
+//  persona2['trabajo'] = 'webDeveloper';
+
+//  console.log(persona2);
+
+//OBJETOS Y METODOS
+
 var persona ={
+    //PROPIEDADES
     nombre   : 'Allison',
     apellido : 'Herrera',
     gustos   : ['Futbol','Peliculas','Inglés'],
     trabajo  : 'Instructor',
-    esCasado : true
+    esCasado : true,
+
+    //METODOS
+    calcularEdad :function(yearNacimiento){
+        return 2022 - yearNacimiento
+    }
 };
 
-console.log(persona.nombre);
-console.log(persona['trabajo'])
+console.log(persona);
+var edad = persona.calcularEdad(1985);
+console.log(edad);

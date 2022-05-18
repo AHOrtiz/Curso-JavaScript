@@ -1,12 +1,192 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!------------------- METAS --------------------->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="aguainmaculada.com">
+    <meta name="description" content="Página Web que sirve para una mejor experiencia para el franquiciatario de Agua inmaculada">
+    <meta name="author" content="Khalifa">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!------------------- sin datos de navegación --------------------->
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <!------------------- STYLESHEETS --------------------->
+
+    <!-- ------------  alertas -----------------------  -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- ------------  iconos -----------------------  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="icon" href="./images/AI.ico" type="image/x-icon" />
+    <link rel="preload" href="./css/publicidad.css" as="style">
+    <link rel="stylesheet" href="./css/publicidad.css">
+    <title>Publicidad</title>
 </head>
+
+
 <body>
-    <script src="app.js"></script>
+<button id="trigger" class="abrirModal" data-open="myModal1" hidden data-toggle="modal"
+  data-target="#myModal1">Auto Click</button>
+  <!-- Modal 1 -->
+  <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="./images/logoModal.png" alt="Logo Modal Agua Inmaculada" class="Logo-Modal">
+          <p class="recomendaciones">Algunas Recomendaciones</p>
+          <a href="#" class="close-button" id="btnCerrar" data-close><i style="color: white; " class="fa fa-window-close" aria-hidden="true"></i></a>
+        </div>
+        <div class="modal-body">
+          <form role="form" action="" method="post" class="registration-form">
+            <fieldset style="display: block;">
+              <div class="form-top">
+                <div class="form-top-left">
+                  <h2>Paso 1 / 2</h2>
+                  <p><strong>Si estas ocupando el navegador Brave te recomendamos el siguiente tutorial:</strong></p>
+                </div>
+              </div>
+              <div class="form-bottom">
+                <p ><strong style="text-decoration: underline;">Consejo:</strong> <br> <strong>1.</strong> Ubica la barra de navegador.  
+                <img src="./images/BarraNavegador.webp" alt="navegador web Brave" class="BarraNavegador">
+                  <br><strong>2.</strong> A continuacion selecciona el icono de brave , es un leon de color naranja. 
+                  <img src="images/IconoBrave.png" alt="navegador web Brave" class="BraveAct">
+                  <br>
+                  <strong>3.</strong> Da click en el icono y se te desplegará el siguiente menu.
+                  <img src="./images/BraveAct.webp" alt="navegador web Brave" class="BraveAct">
+                </p>
+               <p style="font-style: italic;"><strong>Nota:</strong> Omitir tutorial si no esta ocupando este navegador.</p>
+                <button type="button" class="btn btn-next btnRegresar"><i
+                    class="fas fa-arrow-right"></i>&nbsp;Siguiente</button>
+              </div>
+            </fieldset>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="trigger2" class="abrirModal" data-open="myModal2" hidden>Auto Click 2</button>
+  <!-- Modal 2 -->
+  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="./images/logoModal.png" alt="Logo Modal Agua Inmaculada" class="Logo-Modal">
+          <p class="recomendaciones">Algunas Recomendaciones</p>
+          <a href="#" class="close-button" id="btnCerrar" data-close><i style="color: white; " class="fa fa-window-close" aria-hidden="true"></i></a>
+        </div>
+        <div class="modal-body">
+          <form>
+            <fieldset>
+              <div class="form-top">
+                <div class="form-top-left">
+                  <h3>Paso 2 / 2</h3>
+                 
+                </div>
+              </div>
+              <div class="form-bottom">
+              <p> <strong> Consejo:</strong> <br> <strong>1.</strong> Ubica la opción que dice "Las protecciones estan ACTIVADAS" , por defecto esta activada como se muestra en la siguiente imagen:</p>
+                  <img src="./images/Activado.webp" alt="navegador web Brave" class="BraveActivado">
+
+                  <p>  <strong>2.</strong>Desactiva la opción que se menciona en el paso anterior dando clic al circulo. <strong>Debe cambiar el nombre a "Protecciones estan desactivadas"</strong> </p>
+                  <img src="./images/Desactivada.webp" alt="navegador web Brave" class="BraveActivado">
+                <button type="button" class="btn btn-prev btnRegresar"><i
+                    class="fas fa-arrow-left"></i>&nbsp;Anterior</button>
+                <!-- <button type="button" class="btn btn-next boton">Siguiente</button> -->
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+
+
+  
+    <script>
+     
+
+
+
+
+        /* FUNCION REDIRIGIR DEL PORTAL AL MOVIL */
+        /* function fixElements(){
+            if ($(window).width() < 500) {
+                document.location.href = "www.google.com";
+            }
+            else {
+            $(window).resize(function(){
+                document.location = "index.html"
+            ;});
+            } 
+        }
+        window.onresize = fixElements;
+        window.onload = fixElements; */
+    </script>
+    <script>
+        // const togglePassword = document.getElementById('togglePassword');
+        // var password = document.getElementById('pass');
+        // /* var password2 = document.getElementById('pass2'); */
+
+        // togglePassword.addEventListener("click", function() {
+        //     // toggle the type attribute
+        //     const type = password.getAttribute("type") === "password" ? "text" : "password";
+        //     password.setAttribute("type", type);
+
+        //     /*  const type2 = password2.getAttribute("type") === "password" ? "text" : "password";
+        //      password2.setAttribute("type", type2); */
+        //     // toggle the icon
+        //     this.classList.toggle("bi-eye");
+        // });
+
+
+
+        /* FUNCTION MODAL */
+
+        var botonTrigger = document.getElementById("trigger");
+   
+
+   $("div[id^='myModal']").each(function () {
+
+     var currentModal = $(this);
+
+     //click next
+     currentModal.find('.btn-next').click(function () {
+       currentModal.modal('hide');
+       currentModal.closest("div[id^='myModal']").nextAll("div[id^='myModal']").first().modal('show');
+     });
+
+     //click prev
+     currentModal.find('.btn-prev').click(function () {
+       currentModal.modal('hide');
+       currentModal.closest("div[id^='myModal']").prevAll("div[id^='myModal']").first().modal('show');
+        
+     });
+
+     window.addEventListener('DOMContentLoaded', (event) => {
+       document.querySelectorAll("#btnCerrar").forEach(el => {
+         el.addEventListener('click', function (e) {
+           currentModal.modal('hide');
+         });
+       });
+     });
+
+   });
+
+   // Repeticiones cada 5 segundos / setInterval
+   setTimeout(() => {
+     botonTrigger.click();
+   }, 1000);
+    </script>
+    
 </body>
+
 </html>
