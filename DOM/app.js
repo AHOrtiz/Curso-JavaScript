@@ -58,7 +58,7 @@
 // itemList.lastElementChild.textContent ='Soy el ultimo';
 
 //*PreviousSibling: siguiente 
-var itemList = document.querySelector('#items');
+//var itemList = document.querySelector('#items');
 // console.log(itemList.previousSibling);
 
 //*previousElementSibling: elemento anterior del que guarda la variable itemList
@@ -72,19 +72,77 @@ var itemList = document.querySelector('#items');
 
 //*createElement
 //!tagName
-var nuevoDiv = document.createElement('div');
-nuevoDiv.className='hoola';
-nuevoDiv.id='div-hola';
-nuevoDiv.setAttribute('title','Hola mundo');
+// var nuevoDiv = document.createElement('div');
+// nuevoDiv.className='hoola';
+// nuevoDiv.id='div-hola';
+// nuevoDiv.setAttribute('title','Hola mundo');
 
 //*createTextNode
-var nuevoNodoText = document.createTextNode('Hola Mundo');
-nuevoDiv.appendChild(nuevoNodoText)
-console.log(nuevoDiv);
+// var nuevoNodoText = document.createTextNode('Hola Mundo');
+// nuevoDiv.appendChild(nuevoNodoText)
+// console.log(nuevoDiv);
 
-var contenedor = document.querySelector('header .container');
-console.log(contenedor);
+// var contenedor = document.querySelector('header .container');
+// console.log(contenedor);
 
-var h1 = document.querySelector('h1');
-console.log(h1);
-contenedor.insertBefore(nuevoDiv,h1)
+// var h1 = document.querySelector('h1');
+// console.log(h1);
+// contenedor.insertBefore(nuevoDiv,h1)
+
+//*Agregar un elemento a la lista
+
+var form  = document.getElementById('formAgregar');
+var lista = document.getElementById('items');
+var filtro = document.getElementById('filtro');
+
+//*Evento submit del formulario
+form.addEventListener('submit', agregarItem);
+//*Evento click de la lista
+lista.addEventListener('click', eliminarItem);
+//*Evento del teclado en el campo de filtro
+filtro.addEventListener('keyup', filtrarItems)
+
+//*Función para agregar un Item a la lista
+function agregarItem(e){
+//     //*Cancelar evento si es cancelable
+    e.preventDefault();
+    var newItem = document.getElementById("item").value;
+
+    var li = document.createElement('li');
+    li.className ='list-group-item';
+    li.appendChild(document.createTextNode(newItem));
+
+    var botonDel = document.createElement('button');
+    botonDel.className ='btn btn-danger btn-sm float-right eliminar';
+    botonDel.appendChild(document.createTextNode('X'));
+
+    li.appendChild(botonDel)
+   
+    lista.appendChild(li);
+}
+
+//*Funcion para eliminar un item de la lista
+
+function eliminarItem(e){
+   if(e.target.classList.contains('eliminar')){
+       if(confirm('¿Seguro que deseas eliminar el elemento?')){
+           
+           var elemento = e.target.parentElement;
+           lista.removeChild(elemento)       
+       }
+     
+   }
+}
+//*Funcion para filtrar elementos de la lista
+function filtrarItems(e){
+    var texto = e.target.value.toLowerCase();
+    var items  = lista.getElementsByTagName('li');
+  Array.from(items).forEach(function(item){
+      var itemNombre = item.firstChild.textContent;
+      if(itemNombre.toLocaleLowerCase().indexOf(texto) !=1){
+          item.style.display ='block';
+      }else{
+          item.style.display ='none'
+      }
+  });
+}
