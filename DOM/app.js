@@ -139,10 +139,11 @@ function filtrarItems(e){
     var items  = lista.getElementsByTagName('li');
   Array.from(items).forEach(function(item){
       var itemNombre = item.firstChild.textContent;
-      if(itemNombre.toLocaleLowerCase().indexOf(texto) !=1){
+      if(itemNombre.toLocaleLowerCase().indexOf(texto) != -1){
+          //*Va a mantener el elemento mostrado
           item.style.display ='block';
       }else{
-          item.style.display ='none'
+          item.style.display ='none';
       }
   });
 }
