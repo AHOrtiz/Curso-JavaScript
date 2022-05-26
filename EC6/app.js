@@ -143,4 +143,22 @@ const personas =[
 // })
 
 //*! -------------------------------------------------------------------------SPREAD OPERATOR---------------------------------------------------------
+//*? Permite a un elemento iterable tal como un arreglo o cadena ser expandido en lugares  donde cero o mas argumentos (para llamadas de  función) , se debe colocar ... 
+//*? Agrupar o juntar los valores de dos matrices
 
+var suma = function(a,b,c,d){
+    return a + b + c + d;
+}
+
+var ope1 = suma(10,20,30,40);
+console.log(ope1);
+
+var valores = [10,20,30,40];
+const ope2 = suma(...valores)
+console.log("ln 156",ope2)
+
+const rrhh =['Allison','Irwing','Melody'];
+const contabilidad  = ['Luz','Michelle','Arturo'];
+
+const empresa = [...rrhh , ...contabilidad];
+console.log(empresa)
