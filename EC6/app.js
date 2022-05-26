@@ -162,3 +162,4 @@ const contabilidad  = ['Luz','Michelle','Arturo'];
 
 const empresa = [...rrhh , ...contabilidad];
 console.log(empresa)
+
