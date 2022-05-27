@@ -95,54 +95,54 @@
 
 //*!--------------------------------------DESTRUCTURACION DE OBJETOS-----------------------
 //*? Es una expresion que posibilita la extraccion de datos , tanto de arreglos como de propiedades de objetos.
-const getPersonaDatos = () =>{
-    const respuesta =[
-    {
-        codigo : 200,
-        data :{
-           persona:{
-               nombre : 'Allison',
-               direccion : {
-                   ciudad: 'Puebla',
-                   pais : 'mexico'
-               }
+// const getPersonaDatos = () =>{
+//     const respuesta =[
+//     {
+//         codigo : 200,
+//         data :{
+//            persona:{
+//                nombre : 'Allison',
+//                direccion : {
+//                    ciudad: 'Puebla',
+//                    pais : 'mexico'
+//                }
                
-           }
-        }
-    },
-    {
-        codigo : 300,
-        data :{
-           persona:{
-               nombre : 'Ana',
-               direccion : {
-                   ciudad: 'Santiago',
-                   pais : 'Chile'
-               }
+//            }
+//         }
+//     },
+//     {
+//         codigo : 300,
+//         data :{
+//            persona:{
+//                nombre : 'Ana',
+//                direccion : {
+//                    ciudad: 'Santiago',
+//                    pais : 'Chile'
+//                }
                
-           }
-        }
-    },
-    {
-        codigo : 400,
-        data :{
-           persona:{
-               nombre : 'Irwing',
-               direccion : {
-                   ciudad: 'Bogota',
-                   pais : 'Colombia'
-               }
+//            }
+//         }
+//     },
+//     {
+//         codigo : 400,
+//         data :{
+//            persona:{
+//                nombre : 'Irwing',
+//                direccion : {
+//                    ciudad: 'Bogota',
+//                    pais : 'Colombia'
+//                }
                
-           }
-        }
-    }
-    ]
-    return respuesta
-}
+//            }
+//         }
+//     }
+//     ]
+//     return respuesta
+// }
+
+// let {codigo : status, data:{persona:{nombre}}}= getPersonaDatos() [0];
+// for (const {codigo:status,data:{persona:{nombre : nom}}} of getPersonaDatos() ){
+//     console.log(nom)
+// }
 
 
-
-let {codigo : status, data:{persona:{nombre}}}= getPersonaDatos() [0];
-for (const {codigo:status,data:{persona:{nombre : nom}}} of getPersonaDatos() ){
-    console.log(nom)
-}
