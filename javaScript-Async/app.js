@@ -93,7 +93,9 @@ const  getUsuariosIDs = new Promise((response , reject)=>{
 
 async function getUsuariosAW() {
     const IDs = await getUsuariosIDs;
-    console.log(IDs);    
+    console.log(IDs);
+    const usuario = await getUsuariosAW(IDs[3]);
+    console.log(usuario)
 }
 
 getUsuariosAW()
